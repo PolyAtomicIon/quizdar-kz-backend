@@ -18,6 +18,7 @@ class quizController {
 
     async getQuizById(req, res, next) {
         try {
+            console.log("ID of the quiz ", req.params.id)
             Quiz.findById(req.params.id, function(err, post) {
                 if (err) return next(err);
                 res.json(post);
