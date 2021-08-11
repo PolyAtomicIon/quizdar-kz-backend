@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const controller = require('../controller/auth')
+const controller = require('../controller/authController')
 const { check } = require("express-validator")
-const roleMiddleware = require('../middleware/role')
+const roleMiddleware = require('../middleware/roleMiddleware')
 
 router.post('/registration', [
     check('username', 'Username can not be empty').notEmpty(),

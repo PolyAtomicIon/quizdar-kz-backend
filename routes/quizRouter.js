@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const controller = require('../controller/quiz')
-const authMiddleware = require('../middleware/auth')
-const roleMiddleware = require('../middleware/role')
+const controller = require('../controller/quizController')
+const authMiddleware = require('../middleware/authMiddleware')
+const roleMiddleware = require('../middleware/roleMiddleware')
 
 router.get('/', controller.getAllQuizzes);
 router.get('/:id', controller.getQuizById);

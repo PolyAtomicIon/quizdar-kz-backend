@@ -10,8 +10,8 @@ var methodOverride = require('method-override');
 var cors = require('cors');
 
 var index = require('./routes/index');
-var quizzesRouter = require('./routes/quizzes');
-var authRouter = require('./routes/auth');
+var quizRouter = require('./routes/quizRouter');
+var authRouter = require('./routes/authRouter');
 
 var app = express();
 
@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use('/', index);
 app.use('/auth', authRouter)
-app.use('/api/v1/quizzes', quizzesRouter);
+app.use('/api/v1/quiz', quizRouter);
 
 var Category = app.resource = restful.model('category', mongoose.Schema({
         cat_name: String,
