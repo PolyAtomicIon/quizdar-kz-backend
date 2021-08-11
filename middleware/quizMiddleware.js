@@ -3,7 +3,7 @@ const TaskValidator = require("../validators/taskValidator")
 module.exports = function(req, res, next) {
     try {
 
-        const { tasks } = req.body;
+        const { tasks } = req.body.quiz;
 
         if (!!tasks) {
             return res.status(403).json({ message: `Quiz is not valid` })

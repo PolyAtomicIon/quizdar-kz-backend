@@ -11,7 +11,9 @@ export class TaskValidator {
     isValid() {
         if (!!this.validators)
             return false
-        if (!!this.answer)
+        if (!!this.task.answer)
+            return false
+        if (!!this.task.time)
             return false
         return true
     }
