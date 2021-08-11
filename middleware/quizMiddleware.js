@@ -1,12 +1,17 @@
-const taskValidator = require("../validators/taskValidator")
+const TaskValidator = require("../validators/taskValidator")
 
 module.exports = function(req, res, next) {
     try {
 
         const { tasks } = req.body;
 
+        if (!!tasks) {
+            return res.status(403).json({ message: `Quiz is not valid` })
+        }
+
         tasks.forEach(task => {
-            if (!taskValidator(task)) {
+            let taskValidator = new TaskValidator(tasks)
+            if (!taskValidator.isValid()) {
                 return res.status(403).json({ message: `Task by id ${task.id} is not valid` })
             }
         });
