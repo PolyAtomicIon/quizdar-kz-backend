@@ -1,141 +1,145 @@
-[{
-        "type": "multiple-choice",
-        "question": {
-            "content": "http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3",
-            "type": "audio"
+{
+    "quiz_name": "Demo 1",
+    "quiz_desc": "Check validation on backend",
+    "tasks": [{
+            "type": "multiple-choice",
+            "question": {
+                "content": "http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3",
+                "type": "audio"
+            },
+            "time": 20,
+            "options": [{
+                    "variant": 1,
+                    "type": "audio",
+                    "source": "http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3"
+                },
+                {
+                    "variant": 2,
+                    "type": "audio",
+                    "source": "http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3"
+                },
+                {
+                    "variant": 3,
+                    "type": "image",
+                    "source": "https://img.icons8.com/color/452/kahoot.png"
+                }
+            ],
+            "answer": [1]
         },
-        "time": 20,
-        "options": [{
-                "variant": 1,
-                "type": "audio",
-                "source": "http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3"
+        {
+            "type": "multiple-answers",
+            "question": {
+                "content": "lorem ipsum",
+                "type": "text"
             },
-            {
-                "variant": 2,
-                "type": "audio",
-                "source": "http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3"
-            },
-            {
-                "variant": 3,
-                "type": "image",
-                "source": "https://img.icons8.com/color/452/kahoot.png"
-            }
-        ],
-        "answer": [1]
-    },
-    {
-        "type": "multiple-answers",
-        "question": {
-            "content": "lorem ipsum",
-            "type": "text"
+            "time": 10,
+            "options": [{
+                    "variant": 1,
+                    "type": "audio",
+                    "source": "http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3"
+                },
+                {
+                    "variant": 2,
+                    "type": "audio",
+                    "source": "http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3"
+                },
+                {
+                    "variant": 3,
+                    "type": "image",
+                    "source": "https://img.icons8.com/color/452/kahoot.png"
+                }
+            ],
+            "answer": [1, 3]
         },
-        "time": 10,
-        "options": [{
-                "variant": 1,
-                "type": "audio",
-                "source": "http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3"
+        {
+            "type": "drag-drop-matching",
+            "question": {
+                "content": "lorem ipsum",
+                "type": "text"
             },
-            {
-                "variant": 2,
-                "type": "audio",
-                "source": "http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3"
-            },
-            {
-                "variant": 3,
-                "type": "image",
-                "source": "https://img.icons8.com/color/452/kahoot.png"
-            }
-        ],
-        "answer": [1, 3]
-    },
-    {
-        "type": "drag-drop-matching",
-        "question": {
-            "content": "lorem ipsum",
-            "type": "text"
+            "time": 20,
+            "options": [{
+                    "variant": 1,
+                    "type": "text",
+                    "value": "Elephant"
+                },
+                {
+                    "variant": 2,
+                    "type": "text",
+                    "value": "Pig"
+                },
+                {
+                    "variant": 3,
+                    "type": "text",
+                    "value": "Dragon"
+                }
+            ],
+            "labelsToMatch": [
+                "big", "small", "fiction"
+            ],
+            "answer": [1, 2, 3]
         },
-        "time": 20,
-        "options": [{
-                "variant": 1,
-                "type": "text",
-                "value": "Elephant"
+        {
+            "type": "drag-drop-sentence",
+            "question": {
+                "content": "lorem ipsum",
+                "type": "text"
             },
-            {
-                "variant": 2,
-                "type": "text",
-                "value": "Pig"
-            },
-            {
-                "variant": 3,
-                "type": "text",
-                "value": "Dragon"
-            }
-        ],
-        "labelsToMatch": [
-            "big", "small", "fiction"
-        ],
-        "answer": [1, 2, 3]
-    },
-    {
-        "type": "drag-drop-sentence",
-        "question": {
-            "content": "lorem ipsum",
-            "type": "text"
+            "time": 12,
+            "options": [{
+                    "variant": 1,
+                    "value": "Elephant"
+                },
+                {
+                    "variant": 2,
+                    "value": "Pig"
+                },
+                {
+                    "variant": 3,
+                    "value": "Dragon"
+                }
+            ],
+            "sentence": "There was [empty] and [empty] elephant. But it is of course [empty] story",
+            "answer": [1, 2, 3]
         },
-        "time": 12,
-        "options": [{
-                "variant": 1,
-                "value": "Elephant"
+        {
+            "type": "multiple-choice",
+            "question": {
+                "content": "lorem ipsum",
+                "type": "text"
             },
-            {
-                "variant": 2,
-                "value": "Pig"
-            },
-            {
-                "variant": 3,
-                "value": "Dragon"
-            }
-        ],
-        "sentence": "There was [empty] and [empty] elephant. But it is of course [empty] story",
-        "answer": [1, 2, 3]
-    },
-    {
-        "type": "multiple-choice",
-        "question": {
-            "content": "lorem ipsum",
-            "type": "text"
+            "time": 20,
+            "options": [{
+                    "variant": 1,
+                    "type": "text",
+                    "source": "Laimon"
+                },
+                {
+                    "variant": 2,
+                    "type": "audio",
+                    "source": "http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3"
+                },
+                {
+                    "variant": 3,
+                    "type": "text",
+                    "source": "Banana"
+                },
+                {
+                    "variant": 4,
+                    "type": "text",
+                    "source": "Dsa"
+                }
+            ],
+            "answer": [2]
         },
-        "time": 20,
-        "options": [{
-                "variant": 1,
-                "type": "text",
-                "source": "Laimon"
+        {
+            "type": "fill-in",
+            "question": {
+                "content": "lorem ipsum",
+                "type": "text"
             },
-            {
-                "variant": 2,
-                "type": "audio",
-                "source": "http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3"
-            },
-            {
-                "variant": 3,
-                "type": "text",
-                "source": "Banana"
-            },
-            {
-                "variant": 4,
-                "type": "text",
-                "source": "Dsa"
-            }
-        ],
-        "answer": [2]
-    },
-    {
-        "type": "fill-in",
-        "question": {
-            "content": "lorem ipsum",
-            "type": "text"
-        },
-        "time": 20,
-        "answer": ["DOSM"]
-    }
-]
+            "time": 20,
+            "answer": ["DOSM"]
+        }
+    ]
+}
