@@ -1,21 +1,18 @@
-const { check } = require("express-validator")
-const { validatorsByType } = require('./taskTypeValidator')
+const { fieldsToValidateByType } = require('./fieldsToValidateByType')
+const baseFieldsToValidate = [
+    'answer',
+    'time',
+    'question'
+]
 
-export class TaskValidator {
-
-    constructor(task) {
-        this.task = task;
-        this.validators = validatorsByType[task.type] || []
+const isFieldExist = (obj) => {
+    return (field) => {
+        return (field in obj && obj[field])
     }
-
-    isValid() {
-        if (!!this.validators)
-            return false
-        if (!!this.task.answer)
-            return false
-        if (!!this.task.time)
-            return false
-        return true
-    }
-
 }
+
+module.exports = function(task) {
+    let fieldsToValidate = fieldsToValidateByType[task.type] || []
+    fieldsToValidate = fieldsToValidate.concat(baseFieldsToValidate)
+    return fieldsToValidate.every(isFieldExist(task))
+};

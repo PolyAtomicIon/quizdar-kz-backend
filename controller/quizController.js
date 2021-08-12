@@ -31,11 +31,10 @@ class quizController {
 
     async saveQuiz(req, res, next) {
         try {
-            console.log(req.body);
             let quiz = req.body;
-            // get user by token?
-            // quiz.author = user
-            Quiz.create(req.body, function(err, post) {
+            quiz.author = req.user.id
+
+            Quiz.create(quiz, function(err, post) {
                 if (err) {
                     console.log(err);
                     return next(err);
